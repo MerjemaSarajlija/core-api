@@ -41,6 +41,10 @@ describe('DoctorService', () => {
         return Promise.resolve([doctor]);
       });
 
+      mockRepo.findOne = jest.fn(() => {
+        return Promise.resolve(doctor);
+      });
+
       const sut = Container.get(DoctorService);
 
       // from 9am next monday

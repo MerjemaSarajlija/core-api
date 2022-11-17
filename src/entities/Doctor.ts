@@ -14,9 +14,9 @@ export class Doctor extends BaseEntity {
   @Column()
   name: string;
 
-  @OneToMany(() => Availability, availability => availability.doctor)
+  @OneToMany(() => Availability, availability => availability.doctor, {eager: true})
   availability: Availability[];
 
-  @OneToMany(() => Appointment, appointment => appointment.doctor)
+  @OneToMany(() => Appointment, appointment => appointment.doctor, {eager: true})
   appointments: Appointment[];
 }
