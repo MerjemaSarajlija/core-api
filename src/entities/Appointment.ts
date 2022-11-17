@@ -9,8 +9,20 @@ export class Appointment extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Field()
+  @Column()
+  doctorId: number;
+
   @ManyToOne(() => Doctor, doctor => doctor.appointments)
   doctor: Doctor;
+
+  @Field()
+  @Column()
+  patientName: string;
+
+  @Field()
+  @Column()
+  description: string;
 
   @Field()
   @CreateDateColumn()
