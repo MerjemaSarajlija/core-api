@@ -75,3 +75,6 @@ You can also run tests from VSCode debugger scripts:
 
 - Jest All - to run all tests using debugger
 - Jest Current File - to run tests in current open file
+
+
+TIME: 15 hours

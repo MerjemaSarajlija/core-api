@@ -101,6 +101,11 @@ export class DoctorService {
     }
   }
   async getAvailableSlots(from: Date, to: Date): Promise<Slot[]> {
+
+    console.log("from")
+    console.log(from)
+    console.log("to")
+    console.log(to)
     let slots: Slot[] = [];
     const getDoctors = await this.getDoctors();
     getDoctors.map((item) => {
@@ -143,8 +148,6 @@ export class DoctorService {
         });
       });
     });
-
-
     return slots;
   }
 }
